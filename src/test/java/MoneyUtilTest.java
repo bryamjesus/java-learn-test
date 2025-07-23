@@ -17,4 +17,11 @@ public class MoneyUtilTest
         String money = MoneyUtil.format(-1000);
         Assert.assertEquals("-$1000.00", money);
     }
+
+    @Test
+    public void euroFormatTest()
+    {
+        String money = MoneyUtil.format(-1000, "€");
+        Assert.assertEquals("-€1000.00", money);
+    }
 }

@@ -7,11 +7,15 @@ public class MoneyUtil
 {
     public static String format(double money)
     {
-        String symbol = "$";
+        return format(money, "$");
+    }
+
+    public static String format(double money, String symbol)
+    {
         if (money < 0)
         {
             money = money * (-1);
-            symbol = "-$";
+            symbol = "-" + symbol;
         }
 
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
