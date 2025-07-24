@@ -31,20 +31,30 @@ public class FizzBuzzTest
     {
         FizzBuzz game = new FizzBuzz();
         List<String> numberList = game.getNumbers();
-        Assert.assertEquals("Fizz", numberList.get(2));
-        Assert.assertEquals("Fizz", numberList.get(5));
-        Assert.assertEquals("Fizz", numberList.get(8));
-        Assert.assertEquals("Fizz", numberList.get(11));
+        Assert.assertEquals(FizzBuzz.FIZZ, numberList.get(2));
+        Assert.assertEquals(FizzBuzz.FIZZ, numberList.get(5));
+        Assert.assertEquals(FizzBuzz.FIZZ, numberList.get(8));
+        Assert.assertEquals(FizzBuzz.FIZZ, numberList.get(11));
     }
 
     @Test
-    public void should_returnFizz_whenAMultipleOf5Test()
+    public void should_returnBuzz_whenAMultipleOf5Test()
     {
         FizzBuzz game = new FizzBuzz();
         List<String> numberList = game.getNumbers();
-        Assert.assertEquals("Buzz", numberList.get(4));
-        Assert.assertEquals("Buzz", numberList.get(9));
-        Assert.assertEquals("Buzz", numberList.get(19));
-        Assert.assertEquals("Buzz", numberList.get(24));
+        Assert.assertEquals(FizzBuzz.BUZZ, numberList.get(4));
+        Assert.assertEquals(FizzBuzz.BUZZ, numberList.get(9));
+        Assert.assertEquals(FizzBuzz.BUZZ, numberList.get(19));
+        Assert.assertEquals(FizzBuzz.BUZZ, numberList.get(24));
+    }
+
+    @Test
+    public void should_returnFizzBuzz_whenAMultipleOf3Or5Test()
+    {
+        List<String> numberList = game.getNumbers();
+        Assert.assertEquals(FizzBuzz.FIZZ_BUZZ, numberList.get(14));
+        Assert.assertEquals(FizzBuzz.FIZZ_BUZZ, numberList.get(29));
+        Assert.assertEquals(FizzBuzz.FIZZ_BUZZ, numberList.get(44));
+        Assert.assertEquals(FizzBuzz.FIZZ_BUZZ, numberList.get(59));
     }
 }
