@@ -1,4 +1,4 @@
-package mokito;
+package mokito.example1;
 
 import java.util.Random;
 import java.util.Scanner;
